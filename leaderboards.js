@@ -1,10 +1,10 @@
-var names = document.querySelectorAll("h3 > span.pink-title");
+// var names = document.querySelectorAll("h3 > span.pink-title");
 
-var smeker = "<img src='http://www.myiconfinder.com/uploads/iconsets/16-16-f51dd0fb87971cb31fe84079a3d35dc4-emoji.png'>"
+// var smeker = "<img src='http://www.myiconfinder.com/uploads/iconsets/16-16-f51dd0fb87971cb31fe84079a3d35dc4-emoji.png'>"
 
-for (let el of names) {
-  el.innerHTML += smeker;
-}
+// for (let el of names) {
+//   el.innerHTML += smeker;
+// }
 
 
 /* NOTES

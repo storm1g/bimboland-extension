@@ -21,7 +21,7 @@
       "js":["minigames.js"]
     },
     {
-      "matches": ["*://bimbo.land/fight/details/*", "*://bimbo.land/debate/details/*"],
+      "matches": ["*://bimbo.land/fight/*", "*://bimbo.land/debate/*"],
       "js":["fights.js"]
     }
   ],
