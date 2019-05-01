@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Bimboland Extension",
+  "description": "Bimboland Tools",
+  "version": "1.0.0",
+  "icons": {
+    "128": "Bimboland_flag.png"
+  },
+
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://bimbo.land/leaderboards/*"],
+      "js": ["leaderboards.js"]
+    },
+    {
+      "matches": ["*://bimbo.land/arcade-station/*"],
+      "js":["minigames.js"]
+    },
+    {
+      "matches": ["*://bimbo.land/fight/details/*", "*://bimbo.land/debate/details/*"],
+      "js":["fights.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": ["http://*/*", "https://*/*", "activeTab", "webNavigation", "*://*/*"],
+
+  "web_accessible_resources": ["minigame.js", "fight.js"]
+}

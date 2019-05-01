@@ -1,0 +1,27 @@
+var votes = document.getElementsByClassName("votes");
+var voteBtns = document.getElementsByClassName("b-button-special-submit");
+var skipBtn = document.getElementsByClassName("b-compact")[1];
+const debateRow = document.querySelectorAll('.b-entry');
+
+
+function getLastChar(str){
+	if(str.length){
+		return str[str.length-1]
+	}
+	return "0";
+}
+
+// Takes the string "Votes: X" and extracts the number (X)
+var leftvote = getLastChar(votes[0].innerText);
+var rightvote = getLastChar(votes[1].innerText);
+
+// Votes for the player with more votes, random if it's a tie or skips if the fight is over (5:5)
+if (leftvote == 5 || rightvote == 5){
+    skipBtn.click();
+} else if (leftvote === rightvote) {
+    voteBtns[Math.round(Math.random())].click();
+} else if (leftvote > rightvote){
+    voteBtns[0].click();
+} else {
+    voteBtns[1].click();
+};
