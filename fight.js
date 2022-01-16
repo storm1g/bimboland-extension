@@ -20,8 +20,8 @@ if (debateRow.length > 0){
 var leftvote = getLastChar(votes[0].innerText);
 var rightvote = getLastChar(votes[1].innerText);
 
-// Votes for the player with more votes, random if it's a tie or skips if the fight is over (5:5)
-if (leftvote == 5 || rightvote == 5){
+// Votes for the player with more votes, random if it's a tie, skips if the fight is over (5:5) or vote buttons are disabled (players blocked)
+if ((leftvote == 5 || rightvote == 5) || (voteBtns[0].classList.contains("disabled") || voteBtns[1].classList.contains("disabled"))){
     skipBtn.click();
 } else if (leftvote === rightvote) {
     voteBtns[Math.round(Math.random())].click();

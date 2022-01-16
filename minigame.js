@@ -2,10 +2,6 @@ var squares = document.querySelectorAll(".front");
 
 for (var i = 0; i < squares.length; i++) {
   squares[i].textContent = game.board.charAt(i);
-  // squares[i].style.fontSize = "32px";
-  // squares[i].style.textAlign = "center";
-  // squares[i].style.padding = "10px";
-  // squares[i].style.color = "blue";
 };
 
 // Remove duplicate characters in the pairs string
@@ -16,8 +12,9 @@ for (let i = 0; i < arr.length; i++){
     $('.front:contains("' + arr[i] + '")').click();
 };
 
-// Memory game pairs are stored as a string with pairs of characters
+arr = []
 
+// Memory game pairs are stored as a string with pairs of characters
 function removeDuplicateCharacters(string) {
   return string
     .split('')
